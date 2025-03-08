@@ -2,15 +2,26 @@ name: Jekyll Themes
 url: http://matt.harzewski.com
 description: Insert tagline here
 
+# Set the permalink structure for your pages or themes
 permalink: /themes/:title/
 
-plugins: [jekyll-paginate]
+# Jekyll plugins – here we use jekyll-paginate
+plugins:
+  - jekyll-paginate
 
+# For syntax highlighting
 highlighter: pygments
+
+# Paginate settings (for blogs / index pages)
 paginate: 20
+paginate_path: "/page:num/"
 
-markdown: rdiscount
-rdiscount:
-    extensions: ['smart']
+# Use kramdown as the Markdown processor (Jekyll default)
+markdown: kramdown
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'vendor']
+exclude:
+  - README.md
+  - Gemfile.lock
+  - Gemfile
+  - Rakefile
+  - vendor
